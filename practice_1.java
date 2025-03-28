@@ -9,21 +9,15 @@ public class practice_1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 			int k =0;
-			ArrayList<Integer> p = new ArrayList<>();
 			Scanner sc = new Scanner(System.in);
-			System.out.print("몇개의 수 입력 ? :: ");
-			int su = sc.nextInt();
-			for(int l = 0; l < su ; l++) {
-			System.out.print((l+1) + "번째 : ");
-			int o = sc.nextInt();
-			p.add(l, o);
-			System.out.println();
+			int[] a = new int[4];
+			for(int i : a)
+			{
+				System.out.println((i+1) + "번째 수 입력 : ");
+				int p = sc.nextInt();
+				a[i] = p;
+				k = k + a[i];
 			}
-			for(int i  : p) {	
-				k = k + i;
-				System.out.println(k);
-				
-			}
-
+			System.out.println("모든 것의 합 : " + k);
 	}
 }
