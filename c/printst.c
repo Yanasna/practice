@@ -4,7 +4,7 @@
 
 main()
 {
-	printf("ÇÇ¶ó¹Ìµå Ãş¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("í”¼ë¼ë¯¸ë“œ ì¸µìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 	int floor = 0;
 	scanf_s("%d", &floor);
 	int star_count = 0;
@@ -19,21 +19,21 @@ main()
 			printf("*");
 		}
 		star_count += 2;
-		printf("\n"); //Ãş
+		printf("\n"); //ì¸µ
 	}
 }
 
 
 //main(){
-// printf("±¸±¸´Ü");
+// printf("êµ¬êµ¬ë‹¨");
 //
 // for (int i = 1; i < 10; i++) {
-//	 printf("%d ´Ü\n", i);
+//	 printf("%d ë‹¨\n", i);
 //	 for (int l = 1; l < 10; l++) {
 //		 printf("%d * %d = %d\n", i,  l, i * l);
 //	 }
 // }
-// printf("¿øÇÏ´Â ´Ü ÀÔ·Â : \n");
+// printf("ì›í•˜ëŠ” ë‹¨ ì…ë ¥ : \n");
 // int su = 0;
 //
 // scanf_s("%d", &su);
