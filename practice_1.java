@@ -2,7 +2,7 @@ package practice2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
+import java.util.Scanner;
 
 public class practice_1 {
 
@@ -10,9 +10,15 @@ public class practice_1 {
 		// TODO Auto-generated method stub
 			int k =0;
 			ArrayList<Integer> p = new ArrayList<>();
-			p.add(0, 1);
-			p.add(1, 2);
-			p.add(2, 3);
+			Scanner sc = new Scanner(System.in);
+			System.out.print("몇개의 수 입력 ? :: ");
+			int su = sc.nextInt();
+			for(int l = 0; l < su ; l++) {
+			System.out.print((l+1) + "번째 : ");
+			int o = sc.nextInt();
+			p.add(l, o);
+			System.out.println();
+			}
 			for(int i  : p) {	
 				k = k + i;
 				System.out.println(k);
