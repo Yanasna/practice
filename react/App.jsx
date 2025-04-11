@@ -1,24 +1,32 @@
 import React from 'react';
-import Body from './components/Body';
-import Counter from './components/Counter';
+import { useState } from 'react';
+import './App.css';
+import Header from './W03/Header';
+import Skill from './W03/Skill';
+import Career from './W03/Career';
+import Reward from './W03/Reward';
 
 
 
-export default function App() {
-
-    const animals = ["기린 ", "사자 "];
-    const anotheranimals = [...animals, "고양이 "];
-    const sin = {
-      name : "YJ",
-      location : "where",
-      favorList : ["김치", "피자"]
-    };
+function App() {
+  const obj_a = {
+    color : "green",
+  }
+  const obj = {a : 1}
   return (
-    <>
-     <h1>카운터</h1>
-     <p>{anotheranimals}</p>
-     <Counter />
-     <Body {...sin}/>
-    </>
+    <div>
+      <h1>이력서</h1>
+      <h2>개인정보</h2>
+      <Header name = "김영중" phone ="010-2929-4432" email="Yura034030@gmail.com"/>
+      <Skill contents = "어느정도의 react jsx의 문법을 다룰 수 있습니다."/>
+      <Career content_1 = "학력사항" content_2 = "학력 내용"/>
+      <Career content_1 = "학력사항" content_2 = "경력 내용"/>
+      <Reward content = "none/null"/>
+      <p style = {obj_a}>{obj.a}</p>
+      <p className = "style_1">AA</p>
+    </div>
   )
-};
+}
+
+export default App
+
