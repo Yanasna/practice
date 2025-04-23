@@ -1,25 +1,50 @@
-package practice2;
+package dy0415;
 
-import java.io.*;
-import java.util.Scanner;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class practice{
-	public static void main(String[] args) {	
-		
-	try {
-		FileReader fr = new FileReader("C:\\Users\\yura0\\Yellow.txt");
-		BufferedReader br = new BufferedReader(fr);
-		
-		String c;
-		while((c = br.readLine()) != null)
-			System.out.println(c);   
+public class practice extends JFrame{
 	
+	practice(){
+		setTitle("∆«≥⁄øπ¡¶");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setLayout(new FlowLayout());
+		JLabel icecream = new JLabel("");
+		icecream.setText("æ∆¿ÃΩ∫≈©∏≤¿ª ¡¡æ∆«œ≥™ø‰?");
+		JButton jbt_1 = new JButton("Yes");
+		JButton jbt_2 = new JButton("No");
 		
-		System.out.println("Î¨¥ÏÇ¨Ìûà ÌååÏùº Í∞ÄÏ†∏Ïò§Í∏∞ ÏÑ±Í≥µ");
-		br.close();
-		fr.close();
-	}catch (Exception e){
-		e.printStackTrace();
-		}
+		jbt_1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				icecream.setText("≥◊. æ∆¿ÃΩ∫≈©∏≤¿ª ¡¡æ∆«’¥œ¥Ÿ.");
+			}
+		});
+		
+		jbt_2.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				icecream.setText("æ∆¥œø¿. æ∆¿ÃΩ∫≈©∏≤¿ª ¡¡æ∆«œ¡ˆ æ Ω¿¥œ¥Ÿ.");
+			}
+		});
+		this.add(icecream);
+		add(jbt_1);
+		add(jbt_2);
+		setSize(400, 300);
+		setVisible(true);
+		
 	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new practice();
+	}
+
 }
