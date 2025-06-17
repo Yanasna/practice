@@ -1,0 +1,14 @@
+{
+	"posts": [
+		{
+			"id": 1,
+			"img": "/assets/epicseven.jpg",
+			"title": "에픽세븐1"
+		},
+		{
+			"id": 2,
+			"img": "/assets/epicseven2.jpg",
+			"title": "에픽세븐2"
+		}
+	]
+}
