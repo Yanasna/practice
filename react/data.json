@@ -2,13 +2,21 @@
 	"posts": [
 		{
 			"id": 1,
-			"img": "/assets/epicseven.jpg",
-			"title": "에픽세븐1"
+			"imgpath": "/asset/epicseven.jpg",
+			"title": "에픽세븐1",
+			"explain" : "7번째 세계를 구하기 위하여 라스가 왔다."
 		},
 		{
 			"id": 2,
-			"img": "/assets/epicseven2.jpg",
-			"title": "에픽세븐2"
+			"imgpath": "/asset/bounsball.jpg",
+			"title": "바운스볼",
+			"explain" : "공을 움직여 스타를 탐하다."
+		},
+		{
+			"id": 3,
+			"imgpath": "/asset/p-sengoku.jpg",
+			"title": "p-sengoku",
+			"explain" : "일본 전국시대, 천하를 탐하다!"
 		}
 	]
 }
