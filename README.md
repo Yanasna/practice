@@ -5,3 +5,6 @@
 
 25/6/17
 <p>React - Json-server upload data.json</p>
+
+25/6/19
+<p>React - data.json && EpicEeven.jsx Update</p>
