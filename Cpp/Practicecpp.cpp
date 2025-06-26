@@ -35,35 +35,19 @@
 #include <windows.h>
 #include<string>
 
-void gamefirst(bool firstTime);
+using namespace std;
 
-int main(void)	 {
-		
-		using namespace std;
-		static bool firstTime = true;
-		string p_name;
+void gamefirst(bool firstTime, string p_name);
+string nameSet();
 
-    	cout << "게임스타트 !!" << endl;
-		
-		gamefirst(firstTime);
-
-
-    return 0;
-}
-void gamefirst(bool firstTime) {
-	using namespace std;
-	
-	
-	string nameSet();
-	name = nameSet();
-	cout << p_name << "";
+void gamefirst(bool firstTime, string p_name) {
+	p_name = nameSet();
+	cout << p_name << "님 환영합니다!";
 
 	firstTime = false;
 }
 
 string nameSet() {
-	using namespace std;
-
 	cout << "당신의 이름은 무엇입니까?";
 	cout << endl;
 
@@ -74,9 +58,11 @@ string nameSet() {
 	cout << "당신의 이름은 " << name << "!" << endl;
 	cout << "예 -> 1 아니오 -> 2" << endl;
 	cin >> nameInt;
+
 	if (nameInt == 2) {
 		return nameSet();
 	}
+
 	else if (nameInt == 1) {
 		return name;
 	}
@@ -84,4 +70,15 @@ string nameSet() {
 		cout << "다시입력해주세요!" << endl;
 		return nameSet();
 	}
+}
+int main(void){
+		static bool firstTime = true;
+		string p_name;
+
+    	cout << "게임스타트 !!" << endl;
+		
+		gamefirst(firstTime, p_name);
+
+
+    return 0;
 }
