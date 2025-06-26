@@ -35,32 +35,53 @@
 #include <windows.h>
 #include<string>
 
+void gamefirst(bool firstTime);
+
 int main(void)	 {
-    std::string message = "HELLO WORLD";
+		
+		using namespace std;
+		static bool firstTime = true;
+		string p_name;
 
-    // 콘솔 핸들 가져오기
-    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    	cout << "게임스타트 !!" << endl;
+		
+		gamefirst(firstTime);
 
-    // 콘솔 정보 가져오기
-    if (GetConsoleScreenBufferInfo(hConsole, &csbi)) {
-        int consoleWidth = csbi.srWindow.Right - csbi.srWindow.Left + 1;
-
-        // 가운데 정렬을 위한 시작 위치 계산
-        int startX = (consoleWidth - message.length()) / 2;
-
-        // 커서 위치 이동
-        COORD coord;
-        coord.X = startX;
-        coord.Y = csbi.dwCursorPosition.Y; // 현재 줄 유지
-        SetConsoleCursorPosition(hConsole, coord);
-
-        // 메시지 출력
-        std::cout << message << std::endl;
-    }
-    else {
-        std::cerr << "콘솔 정보 가져오기 실패!" << std::endl;
-    }
 
     return 0;
+}
+void gamefirst(bool firstTime) {
+	using namespace std;
+	
+	
+	string nameSet();
+	name = nameSet();
+	cout << p_name << "";
+
+	firstTime = false;
+}
+
+string nameSet() {
+	using namespace std;
+
+	cout << "당신의 이름은 무엇입니까?";
+	cout << endl;
+
+	string name;
+	int nameInt;
+
+	cin >> name;
+	cout << "당신의 이름은 " << name << "!" << endl;
+	cout << "예 -> 1 아니오 -> 2" << endl;
+	cin >> nameInt;
+	if (nameInt == 2) {
+		return nameSet();
+	}
+	else if (nameInt == 1) {
+		return name;
+	}
+	else {
+		cout << "다시입력해주세요!" << endl;
+		return nameSet();
+	}
 }
