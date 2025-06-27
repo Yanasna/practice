@@ -71,6 +71,11 @@ string nameSet() {
 		return nameSet();
 	}
 }
+
+void ingame() {
+	cout << "당신이 플레이할 국가를 선택해주세요";
+
+}
 int main(void){
 		static bool firstTime = true;
 		string p_name;
@@ -79,6 +84,7 @@ int main(void){
 		
 		gamefirst(firstTime, p_name);
 
+		ingame();
 
     return 0;
 }
