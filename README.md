@@ -6,7 +6,7 @@
 25/6/19
 <li>[React] - data.json && EpicEeven.jsx Update</p>
 
-25/6/27
+25/6/28
 <li>[Cpp] - PracticeCpp update</li>
 <p>cpp문법 익히기(namespace, cout, cin, ...)</p>
 <p>간단한 텍스트 기반 게임 만들기 </p>
